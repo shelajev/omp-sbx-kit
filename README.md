@@ -9,6 +9,8 @@ The OpenRouter key stays in Docker Sandboxes' host credential store. Inside the
 sandbox, `OPENROUTER_API_KEY` is only a sentinel; the proxy replaces it in the
 `Authorization` header when omp calls `openrouter.ai`.
 
+![OMP running interactively in a Docker Sandbox](docs/images/omp-interactive.png)
+
 ## Quick start
 
 Store your OpenRouter key once:
