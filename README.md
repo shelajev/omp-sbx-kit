@@ -24,7 +24,7 @@ sbx settings set kit.allowedSources '["docker.io/","github.com/shelajev/"]'
 sbx run --kit git+https://github.com/shelajev/omp-sbx-kit.git omp .
 ```
 
-The default model is `openrouter/ox/alpha`. Choose another OpenRouter model
+The default model is `openrouter/stealth/ox-alpha`. Choose another OpenRouter model
 for an individual run by passing an omp model selector after `--`:
 
 ```bash
@@ -52,17 +52,18 @@ Pass a different name and any remaining `sbx run` arguments as needed:
 ./run.sh my-omp-sandbox .
 ```
 
-## One-shot tasks
+## Interactive by default
 
-The kit maps non-interactive launches to omp's `--print` mode:
+Launching the kit opens OMP's normal interactive TUI. For a one-shot task,
+pass OMP's `--print` flag explicitly after `--`:
 
 ```bash
-sbx run --task "summarize this repository" \
-  --kit git+https://github.com/shelajev/omp-sbx-kit.git omp .
+sbx run --kit git+https://github.com/shelajev/omp-sbx-kit.git omp . \
+  -- --print "summarize this repository"
 ```
 
-Interactive launches retain omp's normal TUI. Both modes add `--auto-approve`;
-the Docker Sandbox is intended to be the security boundary.
+Both modes add `--auto-approve`; the Docker Sandbox is intended to be the
+security boundary.
 
 ## Network policy
 

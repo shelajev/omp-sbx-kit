@@ -11,10 +11,7 @@ licenses:
 
 sandbox:
   image: docker/sandbox-templates:shell-docker
-  entrypoint: [omp, --model, openrouter/ox/alpha, --auto-approve]
-  command:
-    interactive: []
-    default: [--print]
+  entrypoint: [omp, --model, openrouter/stealth/ox-alpha, --auto-approve]
 
 agentInstructions:
   filename: AGENTS.md
