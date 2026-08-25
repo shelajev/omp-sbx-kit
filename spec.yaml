@@ -11,7 +11,7 @@ licenses:
 
 sandbox:
   image: docker/sandbox-templates:shell-docker
-  entrypoint: [omp, --model, openrouter/openai/gpt-5.5, --auto-approve]
+  entrypoint: [omp, --model, openrouter/ox/alpha, --auto-approve]
   command:
     interactive: []
     default: [--print]

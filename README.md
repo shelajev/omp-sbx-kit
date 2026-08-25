@@ -24,7 +24,7 @@ sbx settings set kit.allowedSources '["docker.io/","github.com/shelajev/"]'
 sbx run --kit git+https://github.com/shelajev/omp-sbx-kit.git omp .
 ```
 
-The default model is `openrouter/openai/gpt-5.5`. Choose another OpenRouter model
+The default model is `openrouter/ox/alpha`. Choose another OpenRouter model
 for an individual run by passing an omp model selector after `--`:
 
 ```bash
